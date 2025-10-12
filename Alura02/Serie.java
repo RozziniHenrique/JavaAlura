@@ -1,4 +1,4 @@
-package JavaAlura.Alura02.Alura02Filmes;
+package JavaAlura.Alura02;
 
 public class Serie extends Titulo {
     private int temporadas;
@@ -47,5 +47,10 @@ public class Serie extends Titulo {
     @Override
     public int getDuracaoEmMinutos() {
         return temporadas * episodiosPorTemporada * minutosPorEpisodio;
+    }
+
+    @Override
+    public String toString(){
+        return "Serie: " + this.getNome() + " (" + this.getAnoDeLancamento() + ")";
     }
 }

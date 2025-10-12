@@ -1,8 +1,8 @@
-package JavaAlura.Alura02.Alura02Filmes;
+package JavaAlura.Alura02;
 
-import JavaAlura.Alura02.Alura02Filmes.Alura02Calculo.Classificavel;
+import JavaAlura.Alura02.Calculo.Classificacao;
 
-public class Episodio implements Classificavel {
+public class Episodio implements Classificacao {
     private int numero;
     private String nome;
     private Serie serie;

@@ -1,4 +1,4 @@
-package JavaAlura.Alura02.Alura02Desafio;
+package JavaAlura.Alura02Desafio;
 
 public class Pessoa {
     private String nome;

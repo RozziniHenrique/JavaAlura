@@ -1,9 +1,13 @@
-package JavaAlura.Alura02.Alura02Filmes;
+package JavaAlura.Alura02;
 
-import JavaAlura.Alura02.Alura02Filmes.Alura02Calculo.Classificavel;
+import JavaAlura.Alura02.Calculo.Classificacao;
 
-public class Filme extends Titulo implements Classificavel {
+public class Filme extends Titulo implements Classificacao {
     private String diretor;
+
+    public Filme(String nome, int anoDeLancamento) {
+        super(nome, anoDeLancamento);
+    }
 
     public String getDiretor() {
         return diretor;
