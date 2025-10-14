@@ -1,31 +1,25 @@
 package JavaAlura.Alura05;
 
-public class Compras {
+public class CartaoCredito {
     private String Produto;
     private double ValorProduto;
     private double SaldoCartao;
 
-    public void setValorProduto(double ValorProduto) {
-        this.ValorProduto = ValorProduto;
-    }
-    public String getValorProduto() {
-        return String.valueOf(ValorProduto);
-    }
-    public void setProduto(String produto) {
-        this.Produto = produto;
-    }
-    public double getValorProdutoDouble() {
-        return ValorProduto;
-    }
-
-    public Compras(String produto, double ValorProduto) {
-        Produto = produto;
-        this.ValorProduto = ValorProduto;
-    }
     public String getProduto() {
         return Produto;
     }
+    public double getValorProduto() {
+        return ValorProduto;
+    }
+    public double getSaldoCartao() {
+        return SaldoCartao;
+    }
+    
 
+    public CartaoCredito(String produto, double valorProduto) {
+        this.Produto = produto;
+        this.ValorProduto = valorProduto;
+    }
     @Override
     public String toString() {
         return Produto + " - R$ " + ValorProduto;

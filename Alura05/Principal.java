@@ -1,7 +1,6 @@
 package JavaAlura.Alura05;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 import java.util.Scanner;
@@ -9,7 +8,7 @@ import java.util.Scanner;
 public class Principal {
     public static void main(String[] args) {
         int controller = 0;
-        List<Compras> lista = new ArrayList<>();
+        List<CartaoCredito> lista = new ArrayList<>();
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Bem vindo ao sistema de compras");
@@ -29,7 +28,7 @@ public class Principal {
 
             if(valorProduto <= saldoCartao){
                 saldoCartao -= valorProduto;
-                lista.add(new Compras(produto, valorProduto));
+                lista.add(new CartaoCredito(produto, valorProduto));
                 System.out.println("Produto adicionado ao carrinho");
                 System.out.println("Saldo restante: " + saldoCartao);
             }else{
@@ -45,7 +44,7 @@ public class Principal {
 
         }
 
-        lista.sort(Comparator.comparing(Compras::getValorProduto).reversed());
+        lista.sort(Comparator.comparing(CartaoCredito::getValorProduto).reversed());
 
         System.out.println("Lista completa de compras ordenado por valor: ");
         System.out.println(lista);
