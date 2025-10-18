@@ -21,15 +21,14 @@ public class Titulo {
         if(nomeFilme.year().length() > 4 ){
             throw new ErroConversao("Formato do ano incorreto");
         }
-        this.anoLancamento = Integer.valueOf(nomeFilme.year());
+        this.anoLancamento = Integer.valueOf(nomeFilme.year()); // FALHA AQUI SE FOR NULO/VAZIO/ESPAÇO!
 
         String runtime = nomeFilme.runtime();
         if (runtime != null && runtime.contains(" ")) {
-            this.duracaoMinutos = Integer.parseInt(runtime.split(" ")[0]);
+            this.duracaoMinutos = Integer.parseInt(runtime.split(" ")[0]); // FALHA AQUI SE NÃO FOR NÚMERO!
         } else {
             this.duracaoMinutos = 0;
         }
-
     }
 
     public int getDuracaoMinutos() {
