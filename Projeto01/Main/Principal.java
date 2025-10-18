@@ -10,7 +10,7 @@ import java.io.IOException;
 
 public class Principal {
 
-    private static final String API_KEY = "d30a8ce";
+    private static final String API_KEY = "XXXXXXX";
     private static final Gson GSON = new GsonBuilder()
             .setFieldNamingPolicy(FieldNamingPolicy.UPPER_CAMEL_CASE)
             .setPrettyPrinting()
@@ -25,4 +25,5 @@ public class Principal {
         controlador.executar();
 
     }
+
 }
